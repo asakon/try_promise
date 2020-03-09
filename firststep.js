@@ -1,9 +1,10 @@
-// 同期処理
+// 非同期処理
 var getHelloWorld = function(){
-  return 'Hello, World!'
+  // setTimeoutを利用して非同期処理を施す
+  setTimeout(function(){
+    return 'Hello, World!'
+  }, 0);
 };
 
 var result = getHelloWorld();
 console.log(result);
-
-// 非同期処理
