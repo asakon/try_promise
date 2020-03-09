@@ -7,8 +7,16 @@ var promise = new Promise(function(resolve, reject) {
   }
 });
 
-promise.then(function(result) {
-  console.log("成功時の処理");
-}, function(err) {
-  console.log("失敗時の処理");
-});
+promise
+  .then(function(){
+  console.log("最初の処理");
+})
+ .then(function(){
+   console.log("２番目の処理");
+ })
+ .catch(function(){
+   console.log("エラー発生時の処理");
+ })
+ .then(function(){
+   console.log("最後の処理");
+ });
